@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let category of categories">
+    {{category.name}}
+    <div *ngIf="category.sublevels && category.sublevels.length>0">
+      <app-category-tree [categories]="category.sublevels"></app-category-tree>
+    </div>
+  </li>
+</ul>

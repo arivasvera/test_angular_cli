@@ -1,0 +1,22 @@
+<h1>Products List</h1>
+
+<table class="table table-responsive table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price | currency}}</td>
+      <td>{{product.quantity}}</td>
+      <td><button (click)="addToCart(product)">Add to Cart</button></td>
+    </tr>
+  </tbody>
+</table>
